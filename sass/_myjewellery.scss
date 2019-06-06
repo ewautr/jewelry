@@ -1,0 +1,158 @@
+.myJewellery {
+    &__heading {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        &-1 {
+            padding-bottom: .7rem;
+        }
+
+        &-categories {
+            color: $color-heading-2;
+            font-size: 1.7rem;
+            padding-top: .5rem;
+
+            a {
+                display: inline-block;
+                margin-left: 1rem;
+                transition: all .2s ease-in;
+            }
+
+            a:hover,
+            a:active {
+                color: $color-heading-1;
+                transform: scale(1.1);
+            }
+        }
+        
+        .navCatsK {
+            color: $color-heading-1;
+        }
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 15.7rem 15.7rem;
+        grid-gap: 2px;
+        width: calc(31.4rem + 2px);
+        margin: auto;
+        
+        @include desk {
+            grid-template-columns: 15.7rem 15.7rem 15.7rem;
+            width: calc(47.1rem + 4px);
+        }
+    }
+
+    .template {
+        &__img1 {
+            width: 15.7rem;
+            height: 15.7rem;
+            overflow: hidden;
+            position: relative;
+
+            &:hover .template__moreInfo {
+                opacity: 1;
+            }
+
+            .img1 {
+                width: 200%;
+                height: 200%;
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &__moreInfo {
+            background-color: rgba($color-black, .7);
+            width: 15.7rem;
+            height: 15.7rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: all .2s ease-out;
+            z-index: 1000;
+            
+            h3 {
+                display: inline-block;
+                margin: 1rem;
+                margin-left: 1rem;
+                
+                @include desk {
+                    margin-left: 2rem;
+                    margin: 1rem;
+                }
+            }
+            
+            p {
+                font-weight: 300;
+                color: $color-heading-2;
+                margin: .2rem 1rem;
+                display: block;
+                
+                @include desk {
+                    margin: .5rem 2rem;
+                }
+            }
+            
+            .material {
+                text-align: right;
+            }
+            
+            .btn {
+                display: block;
+                width: 12rem;
+                margin: auto;
+                text-align: center;
+                margin-top: 1.5rem;
+                
+                @include desk {
+                    margin-top: 2rem;
+                }
+                
+                &__link {
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                    color: $color-heading-2;
+                    border-bottom: 1px solid rgba($color-beige, .5);
+                    padding: .4rem 1rem;
+                    background-color: rgba($color-white, .2);
+        
+                }
+                
+            }
+        }
+
+    }
+    
+    aside {
+        max-width: calc(31.4rem + 2px);
+        margin: auto;
+        margin-bottom: 4rem;
+        
+        .paragraph {
+            border-top: 1px solid $color-beige;
+            padding: 1rem 0;
+        }
+        
+        .paragraph:first-of-type {
+            margin-top: 4rem;
+        }
+        
+        .paragraph:last-of-type {
+            border-bottom: 1px solid $color-beige;
+        }
+        
+        .contact-link {
+            font-weight: 400;
+            cursor: pointer;
+        }
+        
+        .custom {
+            font-weight: 400;
+            
+        }
+    }
+}

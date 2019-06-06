@@ -1,0 +1,197 @@
+.top-bar {
+
+    background-color: $color-beige;
+    width: 100%;
+    height: 3rem;
+
+    &__desktop-menu {
+        display: none;
+        position: absolute;
+        right: 4rem;
+        top: 4rem;
+
+        @include desk {
+            display: inline-block;
+        }
+
+        a {
+            font-weight: 400;
+            color: $color-heading-1;
+            opacity: .7;
+
+        }
+
+        a:not(:last-of-type) {
+            margin-right: 2rem;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+    }
+
+    &__logo {
+        width: 7rem;
+        display: inline-block;
+        padding: .7rem;
+        transform: translateY(-2rem);
+        opacity: .7;
+    }
+
+    &__burger-menu {
+        position: absolute;
+        right: 4rem;
+        top: 3.5rem;
+        text-align: right;
+        z-index: 100000000;
+        text-transform: capitalize;
+
+        @include desk {
+            display: none;
+        }
+
+        &-icon {
+            text-align: right;
+
+            img {
+                width: 2rem;
+                height: 2rem;
+                opacity: .5;
+                text-align: right;
+            }
+        }
+    }
+
+    &__menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($color-white, .95);
+        z-index: 10000;
+
+        @include desk {
+            display: none;
+        }
+
+        &-links {
+            width: 22rem;
+            height: 25rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            text-align: right;
+//            background-color: rgba($color-white, 1);
+            padding: 2rem;
+
+            a {
+                display: block;
+                font-size: 3rem;
+                color: $color-heading-1;
+                border-bottom: 1px solid $color-beige;
+            }
+
+            a:not(:last-of-type) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.text-box {
+    background-color: $color-beige-lighter;
+
+    @include desk {
+        width: 28rem;
+        margin: auto;
+    }
+
+    &__heading {
+        font-size: 2.2rem;
+        margin: 0;
+        padding: 0;
+        border: none;
+        transform: translateY(-1.3rem);
+
+        @include desk {
+            display: block;
+            width: 100rem;
+            transform: translate(-12rem, -3rem);
+            font-size: 4.4rem;
+        }
+    }
+
+    &__par {
+        padding: 1.5rem;
+        padding-top: 0;
+        margin-top: -1rem;
+    }
+}
+
+
+.footer {
+
+    width: calc(100vw - 6rem);
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "logo text text";
+    align-items: center;
+    justify-items: center;
+    background-color: $color-beige;
+
+    @include desk {
+        grid-template-columns: 45% 55%;
+        grid-template-areas: "logo text";
+    }
+
+
+
+    &__logo {
+        grid-area: logo;
+        width: 7rem;
+        opacity: .7;
+        justify-self: left;
+        margin-left: 1rem;
+
+        @include desk {
+            justify-self: right;
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        grid-area: text;
+
+        @include desk {
+            justify-self: left;
+        }
+
+        h2 {
+            display: inline-block;
+            color: $color-heading-1;
+            font-weight: 300;
+            border-right: 1px solid $color-heading-1;
+            padding-right: .5rem;
+            margin-right: .5rem;
+        }
+
+        &-icon {
+            width: 1.5rem;
+            margin-right: .5rem;
+        }
+
+        .paragraph {
+            font-size: 1.3rem;
+        }
+
+    }
+
+}

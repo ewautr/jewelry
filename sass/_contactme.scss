@@ -1,0 +1,91 @@
+.contactMe {
+
+    main {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 28rem;
+        height: 19rem;
+        background-image: url(../img/contact-bg.jpg);
+        background-blend-mode: lighten;
+        background-size: cover;
+
+        @include desk {
+            top:45%;
+            width: 41rem;
+            height: 26rem;
+        }
+
+        .contact-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 24rem;
+            height: 16rem;
+            background-color: rgba($color-beige, .87);
+
+            @include desk {
+                width: 37rem;
+                height: 22rem;
+            }
+
+            &__heading {
+                border: none;
+                margin-left: 1rem;
+                margin-top: 1rem;
+                
+                @include desk {
+                    margin-top: 4rem;
+                    margin-left: 3.5rem;
+                }
+            }
+
+            &__list {
+                list-style: none;
+                margin-left: 1rem;
+                 @include desk {
+                    margin-left: 3.5rem;
+                     font-size: 1.3rem;
+                     opacity: .6;
+                }
+
+                &-icon {
+                    width: 2rem;
+                    height: 2rem;
+                    margin: .5rem;
+                    transform: translateY(1rem);
+                }
+            }
+
+        }
+
+    }
+
+    .background {
+        display: block;
+        margin: auto;
+        width: 19rem;
+        height: 28rem;
+        background-color: $color-beige-light;
+
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+
+        @include desk {
+            width: 26rem;
+            height: 34rem;
+            top: 45%;
+        }
+    }
+    
+    .footer {
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+    }
+}

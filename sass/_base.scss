@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1rem = 10px
+    font-family: 'Helvetica Neue', sans-serif;
+    
+    @include desk {
+        font-size: 93.75%; //1rem = 15px
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+}

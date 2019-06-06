@@ -1,0 +1,57 @@
+@font-face {
+  font-family: Champagne;
+  src: url(fonts/champagne-bold.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+
+.font-champagne {
+    font-family: Champagne, sans-serif;
+}
+
+.font-poiret {
+    font-family: 'Poiret One', cursive;
+}
+
+.heading-primary {
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: $color-heading-1;
+    border-bottom: 1px solid $color-beige;
+    margin-top: 3rem;
+    
+}
+
+.heading-secondary {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $color-heading-2;
+}
+
+.heading-tertiary {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: $color-heading-2;
+    border-bottom: 1px solid $color-beige-light;
+}
+
+.paragraph {
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: $color-text;
+    hyphens: auto;
+
+    @include desk {
+        font-size: 1.3rem;
+    }
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.active {
+    text-decoration: underline;
+}

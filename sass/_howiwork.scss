@@ -1,0 +1,146 @@
+.howIwork {
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 8rem;
+        
+        
+        @include desk {
+            
+            text-align: center;
+            
+            &-1 {
+                display: block;
+            }
+            &-2 {
+                display: block;
+                font-weight: 100;
+            }
+            
+        }
+    }
+
+    .process {
+        display: grid;
+        margin: auto;
+        margin-bottom: 4rem;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 3rem;
+        grid-template-areas:
+            "pic1 ..."
+            "n1 text1"
+            "pic2 ..."
+            "n2 text2"
+            "pic3 ..."
+            "n3 text3";
+
+        @include desk {
+            width: 80%;
+            margin: auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-areas:
+                "text1 pic1 ..."
+                "text1 pic2 text2"
+                "text3 pic3 text2"
+                "text3 ... ...";
+            justify-items: center;
+            grid-row-gap: 10rem;
+            grid-column-gap: 3rem;
+        }
+
+
+        &__pic {
+            width: 15rem;
+            height: 15rem;
+
+            &-1 {
+                grid-area: pic1;
+            }
+
+            &-2 {
+                grid-area: pic2;
+            }
+
+            &-3 {
+                grid-area: pic3;
+            }
+
+            &-4 {
+                grid-area: pic4;
+            }
+        }
+
+        .text-box {
+            &-1 {
+                grid-area: text1;
+            }
+
+            &-2 {
+                grid-area: text2;
+            }
+
+            &-3 {
+                grid-area: text3;
+            }
+
+            &-4 {
+                grid-area: text4;
+            }
+
+            @include desk {
+                width: 15.6rem;
+
+                &__heading {
+                    transform: translate(0, -2.3rem);
+                    width: 20rem;
+                    font-size: 3.5rem;
+                }
+            }
+        }
+
+        .number {
+            justify-self: center;
+
+            @include desk {
+                display: none;
+            }
+
+            &-1 {
+                grid-area: n1;
+            }
+
+            &-2 {
+                grid-area: n2;
+            }
+
+            &-3 {
+                grid-area: n3;
+            }
+
+            &-4 {
+                grid-area: n4;
+            }
+        }
+    }
+
+    .background {
+        width: 6rem;
+        height: 120rem;
+        background-color: $color-beige;
+        z-index: -1;
+
+        position: absolute;
+        top: 20rem;
+        left: calc(3rem + (15rem/2) - (6rem/2));
+
+        @include desk {
+            position: absolute;
+            top: 20rem;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            height: 70rem;
+        }
+    }
+}
